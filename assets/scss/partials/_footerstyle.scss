@@ -1,0 +1,14 @@
+footer {
+    background-color: $primary-color;
+    display: flex;
+    justify-content: center;
+    height: 50px;
+    border-bottom: 0;
+}
+
+footer {
+    h1 {
+        margin-bottom: 0;
+        color: $secondary-color;
+    }
+}
