@@ -1,23 +1,23 @@
 body {
-  display: flex;
-  flex-direction: column;
-  margin: 0;
-  height: 100svh;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    height: 100svh;
 }
+
 h1 {
-  font-family: Arial, sans-serif;
-  font-weight: 400;
-  font-size: 36px;
-  margin: 0;
-  color: $primary-color;
-  text-align: center;
+    @include mainFont;
+    @include fontLarge;
+    margin: 0;
+    color: $primary-color;
+    text-align: center;
 }
+
 p {
-  font-family: Arial, sans-serif;
-  font-size: 14px;
-  line-height: 1.4;
-  text-align: center;
-  margin-bottom: 40px;
+    @include mainFont;
+    @include fontSmall;
+    text-align: center;
+    margin-bottom: 40px;
 }
 
 figure {
@@ -26,7 +26,7 @@ figure {
     position: relative;
     background: #ccc;
     overflow: hidden;
-    padding-bottom: 100%;
+    padding-bottom: ratio(16,9);
 }
 
 img {
@@ -39,53 +39,51 @@ img {
     object-fit: cover;
 }
 
-header,
-footer {
-  font-family: Arial, sans-serif;
-  font-size: 20px;
-}
+
 .flex-grid {
-  width: 100%;
+    width: 100%;
 }
+
 .column {
-  background: #90ee90;
+    background: #90ee90;
 }
+
 .column:not(:last-child) {
-  margin-bottom: 30px;
+    margin-bottom: 30px;
 }
+
 @media (min-width: $small-media) {
-  .flex-grid {
-    display: flex;
-    flex-direction: row;
-    column-gap: 30px;
-  }
-  .column {
-    width: 33.33%;
-  }
-  .column:not(:last-child) {
-    margin-bottom: 0;
-  }
+    .flex-grid {
+        display: flex;
+        flex-direction: row;
+        column-gap: 30px;
+    }
+
+    .column {
+        width: 33.33%;
+    }
+
+    .column:not(:last-child) {
+        margin-bottom: 0;
+    }
 }
 
 main {
-  background: $secondary-color;
-  flex-grow: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  padding: 30px 20px;
-  max-width: 540px;
-  margin: 0 auto;
-}
-@media (min-width: $small-media) {
-  main {
-    max-width: 100%;
-    padding: 30px;
-  }
-}
-@media (min-width: $medium-media) {
-  main {
-    max-width: 1130px;
-  }
+    background: $secondary-color;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 30px 20px;
+    max-width: 540px;
+    margin: 0 auto;
+    
+    @media (min-width: $small-media) {
+            max-width: 100%;
+            padding: 30px;
+        }
+    @media (min-width: $medium-media) {
+            max-width: 1130px;
+        }
 }

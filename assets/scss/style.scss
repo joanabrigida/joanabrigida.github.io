@@ -1,7 +1,22 @@
 @import
+    "partials/functions",
+    "partials/mixins",
     "partials/colors",
     "partials/media",
     "partials/headerstyle",
     "partials/layout",
     "partials/footerstyle"
 ;
+
+button.primary {
+  border: 1px solid #f00;
+  color: blue;
+  padding: 6px 10px;
+  font-size: 18px;
+  background: green;
+}
+
+button.secondary {
+  @extend .primary;
+  background: red;
+}

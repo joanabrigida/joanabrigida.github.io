@@ -1,0 +1,15 @@
+@mixin mainFont {
+    font-family: Georgia, serif;
+}
+
+@mixin fontSmall {
+    font-size: 16px;
+}
+
+@mixin fontMedium {
+    font-size: rem(20);
+}
+
+@mixin fontLarge{
+    font-size: 35px;
+} 

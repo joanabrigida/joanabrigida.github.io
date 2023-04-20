@@ -2,12 +2,11 @@ header {
     background-color: $primary-color;
     display: flex;
     justify-content: center;
-    height: 50px;
-}
-
-header {
+    height: rem(50);
     
     h1 {
+        @include mainFont;
+        @include fontMedium;
         margin-top: 0;
         color: $secondary-color;
     }
