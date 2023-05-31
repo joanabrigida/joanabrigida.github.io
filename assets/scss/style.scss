@@ -8,16 +8,3 @@
     "partials/footerstyle"
     //"partials/animations"
 ;
-
-button.primary {
-  border: 1px solid #f00;
-  color: blue;
-  padding: 6px 10px;
-  font-size: 18px;
-  background: green;
-}
-
-button.secondary {
-  @extend .primary;
-  background: red;
-}

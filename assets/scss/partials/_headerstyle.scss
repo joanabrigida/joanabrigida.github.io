@@ -1,29 +1,36 @@
 header {
-    background-color: $primary-color;
+    background-color: $white-color;
     display: flex;
     justify-content: space-between;
     height: rem(50);
     padding: 10px;
-    align-items: center;
+    position: fixed;
+    
+    margin: 0;
+    padding: 0;*/
 
-    h1 {
-        @include mainFont;
-        @include fontMedium;
-        margin-top: 0;
-        color: $secondary-color;
-    }
 
     ul {
         list-style-type: none;
         text-decoration: none;
         display: flex;
         column-gap: 20px;
+        color: $black-color;
     }
 
     a {
-        color: aliceblue;
         text-decoration: none;
         &.active {text-decoration: underline;}
-        @include mainFont;
+        @include titleFont;
     }
+
+    .logo{
+        display: flex;
+        margin-top: 0;
+        column-gap: 20px;
+        width: auto;
+        height: 60%;
+        padding: 0;;
+    }
+
 }

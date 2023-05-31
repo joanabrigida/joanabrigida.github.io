@@ -2,8 +2,11 @@ body {
     display: flex;
     flex-direction: column;
     margin: 0;
+    padding: 0;
     height: 100svh;
-    &.portfolio{
+    background-color: $white-color;
+}
+    /*&.portfolio{
         background-color: tomato;
     }
     
@@ -13,55 +16,7 @@ body {
     
     &.home{
         background-color: cadetblue;
-    }
-}
-
-h1 {
-    @include mainFont;
-    @include fontLarge;
-    margin: 0;
-    color: $primary-color;
-    text-align: center;
-}
-
-p {
-    @include mainFont;
-    @include fontSmall;
-    text-align: center;
-    margin-bottom: 40px;
-}
-
-figure {
-    margin: 0;
-    height: 0;
-    position: relative;
-    background: #ccc;
-    overflow: hidden;
-    padding-bottom: ratio(16,9);
-}
-
-img {
-    max-width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-}
-
-
-.flex-grid {
-    width: 100%;
-}
-
-.column {
-    background: #90ee90;
-}
-
-.column:not(:last-child) {
-    margin-bottom: 30px;
-}
+    }*/
 
 @media (min-width: $small-media) {
     .flex-grid {
@@ -89,6 +44,7 @@ main {
     padding: 30px 20px;
     max-width: 540px;
     margin: 0 auto;
+    background-color: #ccc;
     
     @media (min-width: $small-media) {
             max-width: 100%;
@@ -97,4 +53,9 @@ main {
     @media (min-width: $medium-media) {
             max-width: 1130px;
         }
+}
+
+.capa {
+    width: 50%;
+    
 }

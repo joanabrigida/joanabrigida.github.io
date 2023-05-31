@@ -2,11 +2,11 @@ footer {
     background-color: $primary-color;
     display: flex;
     justify-content: center;
-    height: 50px;
+    height: 220px;
     border-bottom: 0;
 
     h1 {
-        @include mainFont;
+        @include handFont;
         @include fontMedium;
         margin-bottom: 0;
         color: $secondary-color;
