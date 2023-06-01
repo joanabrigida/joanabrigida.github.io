@@ -1,5 +1,5 @@
 footer {
-    background-color: $primary-color;
+    background-color: $white-color;
     display: flex;
     justify-content: center;
     height: 220px;
@@ -9,6 +9,6 @@ footer {
         @include handFont;
         @include fontMedium;
         margin-bottom: 0;
-        color: $secondary-color;
+        color: $white-color;
     }
 }

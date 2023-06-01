@@ -35,7 +35,7 @@ body {
 }
 
 main {
-    //background: $secondary-color;
+    background: $secondary-color;
     flex-grow: 1;
     display: flex;
     align-items: center;
@@ -53,9 +53,20 @@ main {
     @media (min-width: $medium-media) {
             max-width: 1130px;
         }
-}
-
-.capa {
-    width: 50%;
     
+    .capa {
+        display: flex;
+        justify-content: center;
+        width: 300px;
+        height: auto;
+        padding: 0;
+    }
+
+    .logobranco {
+        display: flex;
+        justify-content: center;
+        width: 60px;
+        height: auto;
+        padding: 0;
+    }
 }

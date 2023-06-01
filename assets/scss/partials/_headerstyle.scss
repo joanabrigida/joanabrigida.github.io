@@ -2,12 +2,12 @@ header {
     background-color: $white-color;
     display: flex;
     justify-content: space-between;
-    height: rem(50);
+    height: rem(70);
     padding: 10px;
-    position: fixed;
     
     margin: 0;
     padding: 0;*/
+
 
 
     ul {
@@ -15,13 +15,15 @@ header {
         text-decoration: none;
         display: flex;
         column-gap: 20px;
-        color: $black-color;
+        
     }
 
     a {
+        color: $black-color;
         text-decoration: none;
         &.active {text-decoration: underline;}
         @include titleFont;
+        @include paragraph;
     }
 
     .logo{
@@ -30,7 +32,17 @@ header {
         column-gap: 20px;
         width: auto;
         height: 60%;
-        padding: 0;;
+        padding: 0;
     }
 
 }
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+  
+  .sticky + .content {
+    padding-top: 102px;
+  }
