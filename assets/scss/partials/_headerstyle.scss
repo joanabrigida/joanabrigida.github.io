@@ -4,11 +4,63 @@ header {
     justify-content: space-between;
     height: rem(70);
     padding: 10px;
-    
     margin: 0;
-    padding: 0;*/
+    padding: 0;
 
+    .btn--toggle--menu {
+        background: transparent;
+        border: none;
+        display: content;
+        cursor: pointer;
+        @media (min-width: $small-media) {
+        display: none;
+        }
 
+        svg{
+            stroke: $primary-color;
+        }
+    }
+
+    #main-navigation {
+        display: none;
+        @media (min-width: $small-media) {
+            display: block;
+        }
+        &.menu-is-open {
+            display: flex;
+            position: absolute;
+            background: $primary-color;
+            top: 70px;
+            width: 100%;
+            left: 0;
+            text-align: center;
+            height: calc(100svh - 70px);
+            z-index:1;
+            align-items: center;
+            justify-content: center;
+            
+            ul {
+                flex-direction: column;
+                font-size: 30px;
+                gap: 40px;
+                padding-left: 0px;
+            }
+            @media (min-width: $small-media) {
+                display: block;
+                position: static;
+                background: transparent;
+                width: auto;
+                height: auto;
+
+                ul {
+                    flex-direction: row;
+                    color: $white-color;
+                    @include fontMedium;
+                    column-gap: 20px;
+                }
+            }
+        }
+    }
 
     ul {
         list-style-type: none;
@@ -31,18 +83,8 @@ header {
         margin-top: 0;
         column-gap: 20px;
         width: auto;
-        height: 60%;
+        height: 80px;
         padding: 0;
     }
 
 }
-
-.sticky {
-    position: fixed;
-    top: 0;
-    width: 100%;
-  }
-  
-  .sticky + .content {
-    padding-top: 102px;
-  }

@@ -5,18 +5,9 @@ body {
     padding: 0;
     height: 100svh;
     background-color: $white-color;
+    overflow-x: hidden;
 }
-    /*&.portfolio{
-        background-color: tomato;
-    }
     
-    &.Contacts{
-        background-color: palevioletred;
-    }
-    
-    &.home{
-        background-color: cadetblue;
-    }*/
 
 @media (min-width: $small-media) {
     .flex-grid {
@@ -41,10 +32,14 @@ main {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    padding: 30px 20px;
+    padding: 0;
     max-width: 540px;
     margin: 0 auto;
+    margin-bottom: 80px;
     background-color: #ccc;
+    overflow-x: hidden;
+    position: relative;
+    width: 100%;
     
     @media (min-width: $small-media) {
             max-width: 100%;
@@ -57,16 +52,20 @@ main {
     .capa {
         display: flex;
         justify-content: center;
-        width: 300px;
-        height: auto;
+        
+        height: 100%;
         padding: 0;
     }
 
     .logobranco {
         display: flex;
         justify-content: center;
-        width: 60px;
+        width: 100px;
         height: auto;
         padding: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
     }
 }
