@@ -17,6 +17,10 @@
     font-family: Caveat, Arial, Helvetica, sans-serif;
 }
 
+@mixin fontSmall {
+    font-size: 12pt;
+}
+
 @mixin paragraph {
     font-size: 17pt;
 }
