@@ -1,0 +1,26 @@
+.about {
+    h1 {
+        color: $black-color;
+        @include titleFont;
+        @include heading2;
+        font-weight: 400;
+    }
+
+    h2 {
+        color: $primary-color;
+        @include handFont;
+        font-size: 120px;
+        font-weight: 400;
+    }
+
+    .intro {
+        @include mainFont;
+        @include paragraph;
+        font-weight: 800;
+    }
+
+    .main-p {
+        @include mainFont;
+        @include paragraph;
+    }
+}

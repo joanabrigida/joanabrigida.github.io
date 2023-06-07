@@ -7,11 +7,23 @@ body {
     background-color: $white-color;
 }
 
-main .contacts {
+.contacts {
 
+    h1 {
+        color: $black-color;
+        @include titleFont;
+        @include heading1;
+        font-weight: 400;
+    }
 
-h1 {
-    color: $secondary-color;
-    @include titleFont;
-}
+    p {
+        @include mainFont;
+        @include paragraph;
+        font-weight: 300;
+
+    }
+
+    img {
+        width: 60px;
+    }
 }

@@ -1,19 +1,36 @@
 .portfolio2 {
     margin-bottom: 0;
 
-    ul {
+    h1 {
+      @include titleFont;
+      @include heading2;
+      font-weight: 400;  
+    }
+
+    div {
         display: grid;
         grid-template-columns: repeat(5, 1fr);
         grid-template-rows: repeat(3, 1fr);
+        align-items: center;
+        justify-items: center;
+    }
+
+    a {
+        @include titleFont;
+        @include fontMedium;
+        position: relative;
+    }
+
+    .text-paez {
+        position: absolute;
+        top: 80%;
+        left: 40%;
+        transform: translate(-50%, -50%) rotate(-26deg);
     }
 
     img {
         transition: all 0.3s;
-        width: 40px;
-    }
-
-    img:hover {
-        filter: contrast(0) hue-rotate(140deg) saturate(100%) brightness(100%);
+        width: 80%;
     }
 
     .paez {
@@ -30,5 +47,30 @@
         grid-column: 1 / 5;
         /*grid-row: 3 / 4;*/
     }
-}
 
+    @media (min-width: $small-media) {
+        .text-paez {
+            position: absolute;
+            top: 50%;
+            left: 40%;
+            transform: translate(-50%, -50%) rotate(-26deg);
+        }
+    
+        .paez-img:hover ~ .text-paez {
+            opacity: 100%;
+        }
+    
+        span {
+            transition: all 0.3s;
+            opacity: 0;
+        }
+    
+        span:hover {
+            opacity: 100%;
+        }
+
+        img:hover {
+            filter: contrast(0) hue-rotate(140deg) saturate(100%) brightness(100%);
+        }
+    }
+}
