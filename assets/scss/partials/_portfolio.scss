@@ -1,6 +1,7 @@
 .portfolio2 {
     margin-bottom: 0;
     background-color: $white-color;
+    padding: 0;
 
     h1 {
       @include titleFont;
@@ -8,12 +9,13 @@
       font-weight: 400;  
     }
 
-    div {
+    .portfoliogrid {
         display: grid;
         grid-template-columns: repeat(5, 1fr);
-        grid-template-rows: repeat(3, 1fr);
         align-items: center;
         justify-items: center;
+        padding: 0 20px;
+        margin-bottom: 40px
     }
 
     a {
@@ -51,13 +53,13 @@
         top: 40%;
         left: 72%;
         transform: translate(-50%, -50%) rotate(63deg);
-        color: $grey2-color;
+        color: $black-color;
         font-weight: 500;
     }
 
     img {
         transition: all 0.3s;
-        width: 80%;
+        width: 100%;
     }
 
     .paez {
@@ -75,7 +77,26 @@
         /*grid-row: 3 / 4;*/
     }
 
+    .paezbox, .bookbox {
+        display: inline-block;
+        width: 80%;
+    }
+
+    .bookbox {
+        float: right;
+    }
+
+    .phonebox {
+        display: inline-block;
+        width: 70%;
+    }
+
     @media (min-width: $small-media) {
+        .paez {
+            grid-column: 1 / 3;
+            grid-row: 1 / 2;
+        }
+
         .text-paez {
             position: absolute;
             top: 50%;
@@ -83,8 +104,17 @@
             transform: translate(-50%, -50%) rotate(-26deg);
         }
     
-        .paez-img:hover ~ .text-paez {
+        .paezbox:hover .text-paez {
             opacity: 100%;
+        }
+
+        .paezbox:hover .paez-img {
+            filter: contrast(0) hue-rotate(140deg) saturate(100%) brightness(100%);
+        }
+
+        .book {
+            grid-column: 3 / 5;
+            grid-row: 2 / 3;
         }
 
         .text-book {
@@ -93,22 +123,48 @@
             left: 40%;
             transform: translate(-50%, -50%) rotate(-26deg);
         }
-    
-        .book-img:hover ~ .text-book {
+
+        .bookbox:hover .text-book {
             opacity: 100%;
+        }
+
+        .bookbox:hover .book-img {
+            filter: contrast(0) hue-rotate(140deg) saturate(100%) brightness(100%);
+        }
+
+        .bookbox {
+            float: left;
+        }
+
+        .phone {
+            grid-column: 4 / 6;
+            grid-row: 1 / 2;
+        }
+
+        .text-phone {
+            position: absolute;
+            top: 50%;
+            left: 30%;
+            transform: translate(-50%, -50%) rotate(60deg);
+        }
+
+        .phonebox {
+            float: right;
+        }
+
+        .phonebox:hover .text-phone {
+            opacity: 100%;
+        }
+
+        .phonebox:hover .phone-img {
+            filter: contrast(0) hue-rotate(140deg) saturate(100%) brightness(100%);
         }
     
         span {
             transition: all 0.3s;
             opacity: 0;
         }
-    
-        span:hover {
-            opacity: 100%;
-        }
 
-        img:hover {
-            filter: contrast(0) hue-rotate(140deg) saturate(100%) brightness(100%);
-        }
+        
     }
 }

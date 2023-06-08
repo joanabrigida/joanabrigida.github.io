@@ -6,6 +6,12 @@ header {
     padding: 10px;
     margin: 0;
     padding: 0;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    width: 100%;
+
 
     .btn--toggle--menu {
         background: transparent;
@@ -25,6 +31,8 @@ header {
         display: none;
         @media (min-width: $small-media) {
             display: block;
+            padding-right: 20px;
+            align-self: center;
         }
         &.menu-is-open {
             display: flex;

@@ -1,4 +1,4 @@
-.about {
+.sobre {
     h1 {
         color: $black-color;
         @include titleFont;
@@ -11,6 +11,10 @@
         @include handFont;
         font-size: 120px;
         font-weight: 400;
+        position: absolute;
+        top: 90%;
+        left: 70%;
+        margin: 0;
     }
 
     .intro {
@@ -23,4 +27,43 @@
         @include mainFont;
         @include paragraph;
     }
+
+    .aboutgrid {
+        width: 100%;
+    }
+
+    .imagebox {
+        position: relative;
+    }
+
+    .textbox {
+        margin: 0 20px;
+    }
+
+    figure {
+        margin: 0;
+    }
+
+    img {
+        width: 100%;
+    }
+
+    @media (min-width: $small-media) {
+            padding: 0;
+        
+        .aboutgrid {
+            padding: 0 20px;
+            width: calc(100% - 40px);
+            display: grid;
+            grid-template-columns: 3fr 2fr;
+            align-items: end;
+        }
+
+        h2 {
+            top: 50%;
+            left: 80%;
+        }
+
+    }
+
 }

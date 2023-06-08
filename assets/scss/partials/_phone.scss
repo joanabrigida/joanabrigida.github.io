@@ -19,16 +19,27 @@
         @include mainFont;
         @include paragraph;
         font-weight: 700;
-        margin: 0;
+        margin-top: 10px;
+        margin-bottom: 10px;
     }
 
     ul {
         @include mainFont;
         @include paragraph;
         margin: 0;
+        padding-right: 40px;
     }
 
     li {
         margin-top: 20px;
+    }
+
+    .card {
+        width: 300px;
+        margin-top: 20px;
+    }
+
+    .project3img {
+        width: 100svw;
     }
 }

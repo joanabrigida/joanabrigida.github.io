@@ -19,5 +19,16 @@
         @include mainFont;
         @include paragraph;
         font-weight: 700;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .project2img {
+        width: calc(100% - 40px);
+        margin: 0 20px;
+    }
+
+    .project2fig {
+        margin: 0;
     }
 }
