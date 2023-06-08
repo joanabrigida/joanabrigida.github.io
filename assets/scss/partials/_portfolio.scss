@@ -1,5 +1,6 @@
 .portfolio2 {
     margin-bottom: 0;
+    background-color: $white-color;
 
     h1 {
       @include titleFont;
@@ -21,11 +22,37 @@
         position: relative;
     }
 
+    
+
+    .phone-img {
+        transform: rotate(333deg);
+    }
+
     .text-paez {
         position: absolute;
         top: 80%;
         left: 40%;
         transform: translate(-50%, -50%) rotate(-26deg);
+        color: $secondary-color;
+        font-weight: 500;
+    }
+
+    .text-book {
+        position: absolute;
+        top: 0%;
+        left: 55%;
+        transform: translate(-50%, -50%) rotate(20deg);
+        color: $terciary-color;
+        font-weight: 500;
+    }
+
+    .text-phone {
+        position: absolute;
+        top: 40%;
+        left: 72%;
+        transform: translate(-50%, -50%) rotate(63deg);
+        color: $grey2-color;
+        font-weight: 500;
     }
 
     img {
@@ -57,6 +84,17 @@
         }
     
         .paez-img:hover ~ .text-paez {
+            opacity: 100%;
+        }
+
+        .text-book {
+            position: absolute;
+            top: 50%;
+            left: 40%;
+            transform: translate(-50%, -50%) rotate(-26deg);
+        }
+    
+        .book-img:hover ~ .text-book {
             opacity: 100%;
         }
     

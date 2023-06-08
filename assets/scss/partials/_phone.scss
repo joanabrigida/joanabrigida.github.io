@@ -1,4 +1,4 @@
-.pagebook {
+.pagephone {
     background-color: $white-color;
 
     h1 {
@@ -15,9 +15,20 @@
         @include paragraph; 
     }
 
-    .captionbook {
+    .captionphone {
         @include mainFont;
         @include paragraph;
         font-weight: 700;
+        margin: 0;
+    }
+
+    ul {
+        @include mainFont;
+        @include paragraph;
+        margin: 0;
+    }
+
+    li {
+        margin-top: 20px;
     }
 }
