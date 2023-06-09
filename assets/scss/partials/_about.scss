@@ -12,9 +12,10 @@
         font-size: 120px;
         font-weight: 400;
         position: absolute;
-        top: 90%;
-        left: 70%;
+        top: 45%;
+        left: 47%;
         margin: 0;
+        transform: rotate(-20deg);
     }
 
     .intro {
@@ -46,6 +47,15 @@
 
     img {
         width: 100%;
+        margin-bottom: 30px;
+    }
+
+    @media (min-width: $tiny-media) {
+        h2 {
+            font-size: 150px;
+            top: 55%;
+            left: 60%;
+        }
     }
 
     @media (min-width: $small-media) {
@@ -56,14 +66,30 @@
             width: calc(100% - 40px);
             display: grid;
             grid-template-columns: 3fr 2fr;
+            align-items: start;
+        }
+
+        .intro {
+            margin-top: 0;
+        }
+
+        h2 {
+            top: 60%;
+            left: 50%;
+        }
+
+    }
+
+    @media (min-width: $medium-media) {
+        .aboutgrid {
             align-items: end;
         }
 
         h2 {
-            top: 50%;
-            left: 80%;
+            font-size: 190px;
+            top: 0;
+            left: 72%;
         }
-
     }
 
 }

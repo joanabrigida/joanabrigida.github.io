@@ -5,7 +5,7 @@
 
     h1 {
       @include titleFont;
-      @include heading2;
+      @include heading3;
       font-weight: 400;  
     }
 
@@ -20,11 +20,10 @@
 
     a {
         @include titleFont;
-        @include fontMedium;
+        font-size: 14px;
         position: relative;
+        font-weight: 400;
     }
-
-    
 
     .phone-img {
         transform: rotate(333deg);
@@ -36,25 +35,22 @@
         left: 40%;
         transform: translate(-50%, -50%) rotate(-26deg);
         color: $secondary-color;
-        font-weight: 500;
     }
 
     .text-book {
         position: absolute;
         top: 0%;
-        left: 55%;
+        left: 63%;
         transform: translate(-50%, -50%) rotate(20deg);
         color: $terciary-color;
-        font-weight: 500;
     }
 
     .text-phone {
         position: absolute;
         top: 40%;
-        left: 72%;
+        left: 62%;
         transform: translate(-50%, -50%) rotate(63deg);
         color: $black-color;
-        font-weight: 500;
     }
 
     img {
@@ -91,13 +87,23 @@
         width: 70%;
     }
 
+    @media (min-width: $tiny-media) {
+        .text-book, .text-paez, .text-phone {
+            @include paragraph; 
+        }
+
+        
+    }
+
     @media (min-width: $small-media) {
+        
         .paez {
             grid-column: 1 / 3;
             grid-row: 1 / 2;
         }
 
         .text-paez {
+            @include paragraph;
             position: absolute;
             top: 50%;
             left: 40%;
@@ -118,10 +124,12 @@
         }
 
         .text-book {
+            @include paragraph;
+            text-align: center;
             position: absolute;
             top: 50%;
             left: 40%;
-            transform: translate(-50%, -50%) rotate(-26deg);
+            transform: translate(-50%, -50%) rotate(20deg);
         }
 
         .bookbox:hover .text-book {
@@ -142,9 +150,10 @@
         }
 
         .text-phone {
+            @include paragraph;
             position: absolute;
             top: 50%;
-            left: 30%;
+            left: 65%;
             transform: translate(-50%, -50%) rotate(60deg);
         }
 
@@ -166,5 +175,11 @@
         }
 
         
+    }
+
+    @media (min-width: $medium-media) {
+        a {
+            @include fontMedium;
+        }
     }
 }

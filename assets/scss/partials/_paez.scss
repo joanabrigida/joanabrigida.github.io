@@ -3,14 +3,14 @@
 
     h1 {
         align-self: flex-start;
-        padding-left: 16px;
+        padding-left: 20px;
         @include titleFont;
         @include fontLarge;
         font-weight: 400;
     }
     p {
         align-self: flex-start;
-        padding: 0 16px;
+        padding: 0 20px;
         @include mainFont;
         @include paragraph; 
     }
@@ -29,6 +29,15 @@
         font-weight: 700;
     }
 
+    .projectimg {
+        width: calc(100% - 40px);
+        margin: 20px 20px;
+    }
+
+    .projectfig {
+        margin: 0;
+    }
+
     .project1img {
         width: calc(100% - 40px);
         margin: 0 20px;
@@ -36,6 +45,10 @@
 
     .project1fig {
         margin: 0;
+    }
+
+    .filho {
+        margin-top: 80px;
     }
 
     @media (min-width: $small-media) {
@@ -64,4 +77,5 @@
             grid-column: 1;
         }
     }
+
 }

@@ -3,14 +3,14 @@
 
     h1 {
         align-self: flex-start;
-        padding-left: 16px;
+        padding-left: 20px;
         @include titleFont;
         @include fontLarge;
         font-weight: 400;
     }
     p {
         align-self: flex-start;
-        padding: 0 16px;
+        padding: 0 20px;
         @include mainFont;
         @include paragraph; 
     }
@@ -19,8 +19,8 @@
         @include mainFont;
         @include paragraph;
         font-weight: 700;
-        margin-top: 10px;
-        margin-bottom: 10px;
+        margin-top: 30px;
+        margin-bottom: 0;
     }
 
     ul {
@@ -28,6 +28,7 @@
         @include paragraph;
         margin: 0;
         padding-right: 40px;
+        margin-bottom: 40px;
     }
 
     li {
@@ -36,10 +37,20 @@
 
     .card {
         width: 300px;
-        margin-top: 20px;
+        margin-top: 5px;
     }
 
     .project3img {
-        width: 100svw;
+        width: 100%;
+        margin-top: 40px;
+    }
+
+    .project3fig {
+        margin: 0;
+    }
+
+    .cardfig {
+        margin-top: 0;
+        margin-bottom: 0;
     }
 }

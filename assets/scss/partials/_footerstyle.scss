@@ -50,7 +50,12 @@ footer {
         @include fontSmall;
         color: $white-color;
     }
-    
+
+    @media (min-width: $small-media) {
+        h2 {
+            font-size: 80px;
+        }
+    }
 
 }
 
