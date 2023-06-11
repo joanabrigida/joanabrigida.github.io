@@ -53,4 +53,26 @@
         margin-top: 0;
         margin-bottom: 0;
     }
+
+    @media (min-width: $tiny-media) {
+        .card {
+            width: 450px;
+        }
+    }
+    
+    @media (min-width: $small-media) {
+        .card {
+            width: 600px;
+        }
+    }
+
+    @media (min-width: $medium-media) {
+        .card {
+            width: 650px;
+        }
+
+        .project3img {
+            margin-bottom: 40px;
+        }
+    }
 }
