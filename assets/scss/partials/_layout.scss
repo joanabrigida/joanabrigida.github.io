@@ -28,7 +28,7 @@ main {
 .capa {
     display: flex;
     justify-content: center;
-    height: 100%;
+    height: calc(100svh - 120px);
     padding: 0;
 }
 
